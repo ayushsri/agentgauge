@@ -1,0 +1,21 @@
+[project]
+name = "agentgauge"
+version = "0.1.0"
+description = "Evaluation & regression harness for LLM agents: rule-based, numeric, schema, and semantic scoring with diffable run reports."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Ayush Srivastava", email = "ayush.s0410@gmail.com" }]
+keywords = ["llm", "agents", "evaluation", "regression-testing", "genai"]
+dependencies = ["jsonschema>=4.0"]
+
+[project.optional-dependencies]
+semantic = ["numpy>=1.24"]
+dev = ["pytest>=7.0"]
+
+[project.scripts]
+agentgauge = "agentgauge.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
